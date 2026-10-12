@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+[[ $EUID -ne 0 ]] || { echo "Запустите Voice Bridge без sudo." >&2; exit 1; }
+PYTHON=/opt/voice-bridge/runtime/bin/python
+[[ -x "$PYTHON" ]] || { echo 'Install runtime: sudo /opt/voice-bridge/bootstrap-runtime.sh' >&2; exit 1; }
+# Always load this package's source, never a stale user/CLI site-package copy.
+export PYTHONPATH="/opt/voice-bridge/app/src"
+export PYTHONNOUSERSITE=1
+exec "$PYTHON" -m voice_bridge.desktop.app "$@"

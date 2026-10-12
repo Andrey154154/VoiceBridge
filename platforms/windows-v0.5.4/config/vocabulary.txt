@@ -1,0 +1,6 @@
+# Optional user glossary: spoken form = output form
+комфи ю ай = ComfyUI
+давинчи резолв = DaVinci Resolve
+фьюжен = Fusion
+фейрлайт = Fairlight
+кьювен = Qwen

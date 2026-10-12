@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Voice Bridge
+Comment=Local push-to-talk speech-to-text
+Exec=voice-bridge-desktop
+Icon=voice-bridge
+Terminal=false
+Categories=Utility;AudioVideo;Accessibility;
+StartupNotify=true

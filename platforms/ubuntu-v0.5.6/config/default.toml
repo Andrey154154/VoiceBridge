@@ -1,0 +1,45 @@
+[app]
+mode = "dictation"
+language = "Russian"
+log_level = "INFO"
+
+[audio]
+sample_rate = 16000
+channels = 1
+dtype = "float32"
+input_device = ""
+max_seconds = 120
+
+[asr]
+provider = "qwen"
+backend = "hf_native"
+model = "Qwen/Qwen3-ASR-1.7B-hf"
+device = "cuda:0"
+dtype = "bfloat16"
+max_new_tokens = 512
+placement = "adaptive"
+gpu_reserve_gb = 1.5
+min_gpu_offload_gb = 1.0
+cpu_max_memory_gb = 96.0
+prompt = ""
+
+[text]
+vocabulary_file = "config/vocabulary.txt"
+capitalize_sentences = true
+
+[trigger]
+backend = "auto"
+kind = "mouse"
+button = "x1"
+key = "f8"
+evdev_device_match = ""
+evdev_code = "BTN_SIDE"
+consume = false
+
+[injector]
+backend = "auto"
+paste_shortcut = "ctrl+v"
+
+[api]
+host = "127.0.0.1"
+port = 8765

@@ -1,0 +1,12 @@
+VoiceBridge — Local Voice Dictation / Локальный голосовой ввод
+Copyright 2025–2026 Andrey154154 (VoiceBridge project).
+
+VoiceBridge's own source code and original project documentation are licensed
+under the Apache License, Version 2.0. See LICENSE.
+
+Русский: Авторский код VoiceBridge и оригинальная документация проекта
+распространяются по лицензии Apache License, Version 2.0. См. LICENSE.
+
+The license does not grant rights to third-party software or model weights.
+Third-party components retain their own licenses; see THIRD_PARTY_NOTICES.md.
+The Apache license grants no permission to use third-party trademarks.

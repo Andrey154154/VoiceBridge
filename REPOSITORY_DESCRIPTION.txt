@@ -1,0 +1,1 @@
+VoiceBridge — локальный голосовой ввод на Ubuntu и Windows / Local Qwen3-ASR speech-to-text dictation for Ubuntu & Windows.

@@ -1,0 +1,75 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "voice-input-bridge"
+version = "0.5.4"
+description = "Local desktop push-to-talk speech-to-text app for Ubuntu and Windows"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.11"
+authors = [{name = "Voice Input Bridge"}]
+dependencies = [
+  "numpy>=2.0",
+  "sounddevice>=0.5.2",
+]
+
+[project.optional-dependencies]
+hf = [
+  "torch>=2.8",
+  "transformers>=5.13,<6",
+  "accelerate>=1.12",
+  "librosa>=0.11,<1",
+]
+linux = [
+  "evdev>=1.9.0",
+  "pynput>=1.8.1",
+]
+windows = [
+  "PySide6>=6.8,<7",
+]
+desktop = [
+  "PySide6>=6.8,<7",
+]
+api = [
+  "fastapi>=0.116",
+  "uvicorn[standard]>=0.35",
+]
+dev = [
+  "pytest>=8.4",
+]
+ubuntu = [
+  "PySide6>=6.8,<7",
+  "torch>=2.8",
+  "transformers>=5.13,<6",
+  "accelerate>=1.12",
+  "librosa>=0.11,<1",
+  "evdev>=1.9.0",
+  "pynput>=1.8.1",
+  "fastapi>=0.116",
+  "uvicorn[standard]>=0.35",
+]
+all = [
+  "PySide6>=6.8,<7",
+  "torch>=2.8",
+  "transformers>=5.13,<6",
+  "accelerate>=1.12",
+  "librosa>=0.11,<1",
+  "evdev>=1.9.0; platform_system == 'Linux'",
+  "pynput>=1.8.1",
+  "fastapi>=0.116",
+  "uvicorn[standard]>=0.35",
+  "pytest>=8.4",
+]
+
+[project.scripts]
+voice-bridge = "voice_bridge.cli:main"
+voice-bridge-desktop = "voice_bridge.desktop.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]

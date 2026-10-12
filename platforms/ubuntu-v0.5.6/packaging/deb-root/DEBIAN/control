@@ -1,0 +1,11 @@
+Package: voice-bridge
+Version: 0.5.6
+Section: utils
+Priority: optional
+Architecture: amd64
+Maintainer: Voice Bridge
+Depends: python3 (>= 3.11), python3-venv, python3-pip, python3-dev, build-essential, linux-libc-dev, wl-clipboard, xclip, libportaudio2, acl, libegl1, libgl1, libxkbcommon0, libxkbcommon-x11-0, libxcb-cursor0, libxcb-icccm4, libxcb-image0, libxcb-keysyms1, libxcb-render-util0, libxcb-shape0, libxcb-xinerama0, libwayland-client0, libwayland-cursor0, libwayland-egl1
+Description: Local dictation desktop with Qwen3-ASR and model manager
+ Voice Bridge separates its desktop interface from a headless dictation engine,
+ provides native uinput delivery on Wayland, and includes a real paste-field test.
+ Install/upgrade runtime and per-user input access using the bundled install.sh.

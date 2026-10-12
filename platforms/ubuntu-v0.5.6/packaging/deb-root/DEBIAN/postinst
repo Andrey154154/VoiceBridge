@@ -1,0 +1,5 @@
+#!/bin/sh
+set -e
+printf '\nVoice Bridge 0.5.6 application files installed.\n'
+printf 'Use the supplied install.sh to preserve/upgrade the managed runtime and configure input access.\n'
+exit 0
